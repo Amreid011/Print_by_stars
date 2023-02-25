@@ -1,0 +1,799 @@
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>   
+void charA(int i,int n);
+void charB(int i,int n);
+void charC(int i,int n);
+void charD(int i,int n);
+void charE(int i,int n);
+void charF(int i,int n);
+void charG(int i,int n);
+void charH(int i,int n);
+void charI(int i,int n);
+void charJ(int i,int n);
+void charK(int i,int n);
+void charL(int i,int n);
+void charM(int i,int n);
+void charN(int i,int n);
+void charO(int i,int n);
+void charP(int i,int n);
+void charQ(int i,int n);
+void charR(int i,int n);
+void charS(int i,int n);
+void charT(int i,int n);
+void charU(int i,int n);
+void charV(int i,int n);
+void charW(int i,int n);
+void charX(int i,int n);
+void charY(int i,int n);
+void charZ(int i,int n);
+
+void main()
+{
+int i=0,j=0,n;
+		char name[11];
+
+clrscr();
+
+printf("The size recommended to be 7\n");
+printf("Enter the size : ");
+scanf("%i%c",&n);
+n=n+1-n%2;
+printf("The name recommended to be less than six characters\n");
+printf("Please Enter your name : ");
+		do
+		{
+  scanf("%c",&name[i]);
+				name[i]=toupper(name[i]);
+}while(name[i++] != 10 && i<11);
+
+for(i=0;i<n;i++)
+		{
+  printf("\n");
+				j=0;
+  do
+				{
+   switch(name[j])
+   {
+	case 'A':
+	 charA(i,n);
+										printf("  ");
+	 break;
+	case 'B':
+	 charB(i,n);
+										printf("  ");
+	 break;
+	case 'C':
+	 charC(i,n);
+										printf("  ");
+	 break;
+	case 'D':
+	 charD(i,n);
+										printf("  ");
+	 break;
+	case 'E':
+	 charE(i,n);
+										printf("  ");
+	 break;
+	case 'F':
+	 charF(i,n);
+										printf("  ");
+	 break;
+	case 'G':
+	 charG(i,n);
+										printf("  ");
+	 break;
+	case 'H':
+	 charH(i,n);
+										printf("  ");
+	 break;
+	case 'I':
+	 charI(i,n);
+										printf("  ");
+	 break;
+	case 'J':
+	 charJ(i,n);
+										printf("  ");
+	 break;
+	case 'K':
+	 charK(i,n);
+										printf("  ");
+	 break;
+	case 'L':
+	 charL(i,n);
+										printf("  ");
+	 break;
+	case 'M':
+	 charM(i,n);
+										printf("  ");
+	 break;
+	case 'N':
+	 charN(i,n);
+										printf("  ");
+	 break;
+	case 'O':
+	 charO(i,n);
+										printf("  ");
+	 break;
+	case 'P':
+	 charP(i,n);
+										printf("  ");
+	 break;
+	case 'Q':
+	 charQ(i,n);
+										printf("  ");
+	 break;
+	case 'R':
+	 charR(i,n);
+										printf("  ");
+	 break;
+	case 'S':
+	 charS(i,n);
+										printf("  ");
+	 break;
+	case 'T':
+	 charT(i,n);
+										printf("  ");
+	 break;
+	case 'U':
+	 charU(i,n);
+										printf("  ");
+	 break;
+	case 'V':
+	 charV(i,n);
+										printf("  ");
+	 break;
+	case 'W':
+	 charW(i,n);
+										printf("  ");
+	 break;
+	case 'X':
+	 charX(i,n);
+										printf("  ");
+	 break;
+	case 'Y':
+	 charY(i,n);
+										printf("  ");
+	 break;
+	case 'Z':
+	 charZ(i,n);
+										printf("  ");
+	 break;
+   }
+				}while(name[j++] != 10 && j<10);
+}
+		printf("\n\nIf the name doesn't appear correctly reduce size and/or number of characters\n");
+getch();
+}
+
+void charA(int i,int n)
+{
+		int j;
+if (i>=0 && i<(n+1)/2)
+{
+  for(j=0;j<((n+1)/2-1-i);j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<(2*i-1);j++)
+   if(i==0 || i==((n+1)/2-1))
+	printf("*");
+   else
+	printf(" ");
+  if (i != 0)
+   printf("*");
+  for(j=0;j<((n+1)/2-1-i);j++)
+   printf(" ");
+}
+else
+{
+				printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+  printf("*");				
+}
+}
+
+void charB(int i,int n)
+{
+int j;
+if (i==0 || i==n/2 || i==n-1)
+{
+  for(j=0;j<n-2;j++)
+   printf("*");
+  if (n>7)
+   printf("  ");
+  else
+				 printf(" ");
+		}
+else if (i==1 || i==n/2-1 || i==n/2+1 || i==n-2)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("*");
+  if (n>7)
+				 printf(" ");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+  printf("*");
+		}
+}
+
+void charC(int i,int n)
+{
+int j;
+if (i==0 || i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-3;j++)
+   printf("*");
+  printf(" ");
+}
+else if (i==1 || i==n-2)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+   printf(" ");
+
+				printf("*");
+}
+else
+		{
+  printf("*");
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+		}
+}
+
+void charD(int i,int n)
+{
+int j;
+if (i==0 || i==n-1)
+{
+  for(j=0;j<n-2;j++)
+   printf("*");
+  printf("  ");
+		}
+else if (i==1 || i==n-2)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("* ");  
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+  printf("*");
+		}
+}
+
+void charE(int i,int n)
+{
+		int j;
+if (i==0 || i==n/2 || i==n-1)
+  for(j=0;j<n-1;j++)
+   printf("*");
+else			
+		{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+		}
+}
+
+void charF(int i,int n)
+{
+		int j;
+if (i==0 || i==n/2)
+  for(j=0;j<n-1;j++)
+   printf("*");
+else			
+		{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+		}
+}
+
+void charG(int i,int n)
+{
+int j;
+if (i==0 || i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-3;j++)
+   printf("*");
+  for(j=0;j<(n-5)/2+2;j++)
+   printf(" ");
+}
+else if (i==1 || (i>n/2 && i<n-1))
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+   printf(" ");
+
+  printf("*");
+  for(j=0;j<(n-5)/2+1;j++)
+				 printf(" ");
+}
+else if (i==n/2)
+{
+  printf("*");
+  for(j=0;j<(n-5)/2+1;j++)
+   printf(" ");
+				for(j=0;j<n-2;j++)
+   printf("*");
+		}
+		else
+		{
+  printf("*");
+  for(j=0;j<(3*n-5)/2-1;j++)
+				 printf(" ");
+		}
+}
+
+void charH(int i,int n)
+{
+		int j;
+if (i==n/2)
+  for(j=0;j<n-1;j++)
+   printf("*");
+else			
+		{
+  printf("*");
+  for(j=0;j<n-3;j++)
+   printf(" ");
+				printf("*");
+		}
+}
+
+void charI(int i,int n)
+{
+		int j;
+if (i==0 || i==n-1)
+  for(j=0;j<n-2;j++)
+   printf("*");
+else			
+		{
+  for(j=0;j<n/2-1;j++)
+				 printf(" ");
+  printf("*");
+  for(j=0;j<n/2-1;j++)
+   printf(" ");
+		}
+}
+
+void charJ(int i,int n)
+{
+int j;
+if (i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-3;j++)
+				 printf("*");
+  printf(" ");
+}
+else if (i==n-2)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("*");
+		}
+else if (i==0)
+{
+  for(j=0;j<(n-1)/2;j++)
+   printf(" ");
+  for(j=0;j<(n-1)/2;j++)
+				 printf("*");
+		}
+else
+		{
+  for(j=0;j<n-2;j++)
+   printf(" ");
+  printf("*");
+		}
+}
+
+void charK(int i,int n)
+{
+int j;
+printf("*");
+if (i<n/2)
+		{
+  for(j=0;j<n/2-i;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<i;j++)
+   printf(" ");
+}
+else
+{
+  for(j=0;j<i-n/2;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<n-1-i;j++)
+   printf(" ");
+		}
+}
+
+void charL(int i,int n)
+{
+int j;
+		printf("*");
+		for(j=0;j<n-1;j++)
+		 if(i==n-1)
+   printf("*");
+  else 
+   printf(" ");
+}
+
+void charM(int i,int n)
+{
+		int j;
+printf("*");
+if (i==0 || i==n-1)
+  for(j=0;j<2*n-5;j++)
+				 printf(" ");
+else
+{
+  for(j=0;j<i-1;j++)
+   printf(" ");
+  printf("*");
+				for(j=0;j<2*n-5-2*i;j++)
+   printf(" ");
+				if (i != n-2)
+   printf("*");
+  for(j=0;j<i-1;j++)
+   printf(" ");  
+}
+		printf("*");
+}
+
+void charN(int i,int n)
+{
+int j;
+printf("*");
+if (i==0 || i==n-1)
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+else
+{
+  for(j=0;j<i-1;j++)
+   printf(" ");
+  printf("*");
+				for(j=0;j<n-2-i;j++)
+   printf(" ");				  
+}
+		printf("*");
+
+}
+
+void charO(int i,int n)
+{
+		int j;
+if (i==0 || i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-2;j++)
+   printf("*");
+				printf(" ");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+				printf("*");
+}
+}
+
+void charP(int i,int n)
+{
+int j;
+if (i==0 || i==n/2)
+{
+  for(j=0;j<n-2;j++)
+   printf("*");
+  if (n>7)
+   printf("  ");
+  else
+				 printf(" ");
+		}
+else if (i==1 || i==n/2-1)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("*");
+  if (n>7)
+				 printf(" ");
+}
+else if (i>1 && i<n/2-1)
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+  printf("*");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+  if (n>7)
+				 printf(" ");
+		}
+}
+
+void charQ(int i,int n)
+{
+		int j;
+if (i==0 || i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-2;j++)
+   printf("*");
+  if (i==n-1)
+   printf("*");
+  else
+				 printf(" ");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+   printf(" ");
+  if (i==n-2)
+   printf("*");
+  else
+				 printf(" ");
+  printf("*");
+}
+}
+
+void charR(int i,int n)
+{
+int j;
+if (i==0 || i==n/2)
+{
+  for(j=0;j<n-2;j++)
+   printf("*");
+  printf("  ");
+}
+else if (i==1 || i==n/2-1 || i==n/2+1)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("* ");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+				 printf(" ");
+  printf("*");
+		}
+}
+
+void charS(int i,int n)
+{
+		int j;
+if (i==0 || i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-3;j++)
+				 printf("*");
+  printf(" ");
+}
+else if (i==1 || i==n-2)
+{
+  printf("*");
+  for(j=0;j<n-3;j++)
+				 printf(" ");
+  printf("*");
+}
+else if (i==n/2)
+{
+  for(j=0;j<(n-3)/2;j++)
+   printf(" ");
+  printf("**");
+  for(j=0;j<(n-3)/2;j++)
+   printf(" ");
+}
+else if (i>1 && i<n/2)
+{
+  for(j=0;j<i-1;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<n-1-i;j++)
+   printf(" ");
+}
+else
+{
+  for(j=0;j<i;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<n-2-i;j++)
+   printf(" ");
+		}
+}
+
+void charT(int i,int n)
+{
+		int j;
+if (i==0)
+  for(j=0;j<n;j++)
+   printf("*");
+else			
+		{
+  for(j=0;j<n/2;j++)
+				 printf(" ");
+  printf("*");
+  for(j=0;j<n/2;j++)
+   printf(" ");
+		}
+}
+
+void charU(int i,int n)
+{
+		int j;
+if (i==n-1)
+{
+  printf(" ");
+  for(j=0;j<n-2;j++)
+   printf("*");
+				printf(" ");
+}
+else
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+				printf("*");
+}
+}
+
+void charV(int i,int n)
+{
+		int j;
+if (i<=n/2)
+{
+  printf("*");
+  for(j=0;j<n-2;j++)
+   printf(" ");
+				printf("*");
+}
+else if (i==n-1)
+{
+  for(j=0;j<n/2;j++)
+   printf(" ");
+				printf("*");
+  for(j=0;j<n/2;j++)
+   printf(" ");
+		}
+else
+{
+  for(j=0;j<i-n/2;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<2*n-2*i-3;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<i-n/2;j++)
+   printf(" ");
+		}
+}
+
+void charW(int i,int n)
+{
+int j;
+		printf("*");
+if (i==0 || i==n-1)
+  for(j=0;j<2*n-5;j++)
+   printf(" ");
+else if (i==1)
+		{
+  for(j=0;j<n-3;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<n-3;j++)
+   printf(" ");
+}
+else
+{
+  for(j=0;j<n-2-i;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<2*i-3;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<n-2-i;j++)
+   printf(" ");				
+		}
+		printf("*");
+
+}
+
+void charX(int i,int n)
+{
+		int j;
+if (i==n/2)
+{
+  for(j=0;j<i;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<i;j++)
+				 printf(" ");
+}
+else if (i<n/2)
+{
+  for(j=0;j<i;j++)
+   printf(" ");
+  printf("*");
+				for(j=0;j<n-2*i-2;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<i;j++)
+				 printf(" ");
+}
+else
+{
+  for(j=0;j<n-1-i;j++)
+   printf(" ");
+  printf("*");
+				for(j=0;j<2*i-n;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<n-1-i;j++)
+				 printf(" ");
+		}
+}
+
+void charY(int i,int n)
+{
+		int j;
+if (i<n/2)
+{
+  for(j=0;j<i;j++)
+   printf(" ");
+  printf("*");
+				for(j=0;j<n-2*i-2;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<i;j++)
+				 printf(" ");
+}
+else
+{
+  for(j=0;j<n/2;j++)
+   printf(" ");
+  printf("*");
+  for(j=0;j<n/2;j++)
+				 printf(" ");
+}
+}
+
+void charZ(int i,int n)
+{
+int j;
+if (i==0 || i==n-1)
+  for(j=0;j<n;j++)
+   printf("*");
+else
+{
+  for(j=0;j<n-1-i;j++)
+				 printf(" ");
+				printf("*");
+  for(j=0;j<i;j++)
+				 printf(" ");
+		}
+}
